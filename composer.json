@@ -1,7 +1,8 @@
 {
   "name": "sylabs/syph-app",
   "description": "SyphApplication",
-  "minimum-stability": "stable",
+  "minimum-stability": "dev",
+  "prefer-stable" : true,
   "license": "MIT",
   "type": "project",
   "authors": [
