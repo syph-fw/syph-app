@@ -1,0 +1,15 @@
+{% extends 'layout.html.twig' %}
+{% block title %}Template Twig Herdado{% endblock %}
+{% block body %}
+    <h1>Olá {{ nome }}</h1>
+    <ul>
+        {% for t in teste %}
+            <li>{{ t }}</li>
+        {% endfor %}
+        <li>{{ teste[0] }}</li>
+    </ul>
+
+{% endblock %}
+{% block footer %}
+    <p>Rodapé</p>
+{% endblock %}
