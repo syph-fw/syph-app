@@ -12,6 +12,15 @@ use Syph\Core\Kernel;
 class AppKernel extends Kernel
 {
 
+    public function registerApps(){
+        $apps = array(
+            new DemoApp\DemoApp(),
+
+        );
+        return $apps;
+    }
+
+
 
 
 

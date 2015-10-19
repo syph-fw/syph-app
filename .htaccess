@@ -6,7 +6,7 @@ RewriteCond %{REQUEST_FILENAME} !-l
 
 
 
-RewriteRule ^(.+)$ index.php?path=$1 [QSA]
+RewriteRule ^(.+)$ public/index.php?path=$1 [QSA]
 
 RewriteCond %{REQUEST_URI} !\.(?:css|js|png|jpeg|gif|woff|woff2|ttf)$ [NC]
 RewriteRule ^assets/ - [L,F]

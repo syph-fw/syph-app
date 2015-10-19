@@ -6,9 +6,14 @@
  * Time: 12:47
  * Description: Arquivo de rotas do CRUD
  */
-use Syph\Routing\Router;
+use Syph\Routing\Route;
+use Syph\Routing\RouterCollection;
 
-Router::route('/nome/(\w+)', function($nome){
-    $controller = 'DemoApp:HomeController';
-    return array('controller'=>$controller,'action'=>'index','args'=>array($nome));
-});
+RouterCollection::route(
+    'home',
+    new Route('/nome/(\w+)', function($nome){
+            $controller = 'DemoApp:HomeController:index';
+            return array('controller'=>$controller,'args'=>array('nome'=>$nome));
+        }
+    )
+);
