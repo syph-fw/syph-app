@@ -10,6 +10,7 @@
 require_once __DIR__.'/vendor/autoload.php';
 
 $env = include_once('env.php');
+include_once('global/functions.php');
 $loaded = new \Syph\AppBuilder\Environment();
 $loaded->setEnv($env);
 
