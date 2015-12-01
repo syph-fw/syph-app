@@ -37,6 +37,21 @@ return array(
                     'strategy'=>'instance'
                 )
             )
-        )
+        ),
+        'view.renderer' => array(
+            'class'=>'Syph\\View\\Renderer',
+            'strategy'=>'instance',
+            'args'=>array(
+                'http.request' => array(
+                    'class'=>'Syph\\Http\\Base\\Request',
+                    'strategy'=>'instance'
+                )
+            )
+        ),
+		'cache' => array(
+			'class'=>'Syph\\Cache\\FileCache',
+			'strategy'=>'instance',
+		),
+
     )
 );
