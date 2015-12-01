@@ -12,7 +12,7 @@ return array(
     'env' => 'dev',
     'version' => '2.0.1',
     'packages' => array(
-        'DemoApp' => __DIR__.DS.'app'.DS.'',
+        'DemoApp' => __DIR__.DS.'app'.DS,
     )
 
 
