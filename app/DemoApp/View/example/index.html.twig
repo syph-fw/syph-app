@@ -1,15 +1,40 @@
 {% extends 'layout.html.twig' %}
-{% block title %}Template Twig Herdado{% endblock %}
+{% block title %}Bem vindo ao Syph{% endblock %}
 {% block body %}
-    <h1>Olá {{ nome }}</h1>
-    <ul>
-        {% for t in teste %}
-            <li>{{ t }}</li>
-        {% endfor %}
-        <li>{{ teste[0] }}</li>
-    </ul>
+    <div class="loader-wrapper">
+        <div id="loader-image"></div>
+    </div>
+    <!-- **Wrapper** -->
+    <div class="wrapper">
+        <div class="inner-wrapper">
 
-{% endblock %}
-{% block footer %}
-    <p>Rodapé</p>
+            <!-- **Main - Starts** -->
+            <div id="main">
+                <div class="blank-template-container">
+                    <div class="blank-template">
+                        <div class="blank-template-wrapper">
+                            <div class="container">
+                                <!-- Primary Starts -->
+                                <section id="primary" class="content-full-width">
+                                    <h2 class="aligncenter">Bem vindo ao Syph</h2>
+                                    <p class="aligncenter">Parabéns por escolher começar certo.</p>
+
+                                    <h3 class="aligncenter"> Entre em contato </h3>
+                                    <div class="aligncenter">
+                                        <ul class="dt-sc-social-icons">
+                                            <li> <a title="twitter" href="mailto:syph-fw@gmail.com"> <span class="fa fa-envelope"></span>  </a> </li>
+                                            <li> <a title="facebook" href="https://github.com/sylabs"> <span class="fa fa-github"></span>  </a> </li>
+                                        </ul>
+                                    </div>
+
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- **Main - Ends** -->
+
+        </div><!-- **inner-wrapper - End** -->
+
+    </div><!-- **Wrapper - End** -->
 {% endblock %}

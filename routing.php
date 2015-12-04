@@ -11,9 +11,9 @@ use Syph\Routing\RouterCollection;
 
 RouterCollection::route(
     'home',
-    new Route('/nome/(\w+)', function($nome){
+    new Route('/', function(){
             $controller = 'DemoApp:HomeController:index';
-            return array('controller'=>$controller,'args'=>array('nome'=>$nome));
+            return array('controller'=>$controller,'args'=>array());
         }
     )
 );
