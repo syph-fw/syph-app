@@ -14,12 +14,20 @@ use Syph\View\Renderer;
 
 class HomeController extends BaseController
 {
-    public function index($nome){
-        $http = $this->get('http.request');
-        var_dump($http->get);
-//        return View::render(new Renderer('DemoApp:example/index.php'),array('nome'=>$nome));
-        return View::render(new Renderer('DemoApp:example/index.html.twig'),array('nome'=>$nome,'teste'=>array('teste1','teste2')));
+    public function home($nome){
+        $renderer = $this->get('view.renderer');
+        $renderer->run('DemoApp:example/index.html.twig');
+        return View::render($renderer,array('nome'=>$nome));
 
     }
+
+    public function index(){
+        $renderer = $this->get('view.renderer');
+        $renderer->run('DemoApp:index.html.twig');
+        return View::render($renderer,array('nome'=>"Bruno"));
+
+    }
+
+
 
 }
