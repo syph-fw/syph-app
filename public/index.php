@@ -8,15 +8,15 @@ $env = include_once('../bootstrap.php');
 
 require_once __DIR__ . '/../app/AppKernel.php';
 
-$app = new AppKernel($env);
-
 $request = Request::create();
-$response = $app->handleRequest($request,new AppBuilder());
+define('BASE_URL',$request->getBaseUrl());
+
+$app = new AppKernel($env,$request);
+
+$response = $app->handleRequest(new AppBuilder());
 
 try{
     echo $response;
 } catch(Exception $e){
     echo $e->getMessage();
 }
-
-//echo $_GET['path'];

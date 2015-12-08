@@ -18,6 +18,8 @@ class HomeController extends BaseController
     public function index(){
         $renderer = $this->get('view.renderer');
         $renderer->run('DemoApp:example/index.html.twig');
+
+
         return View::render($renderer,array());
 
     }
