@@ -9,6 +9,7 @@ $env = include_once('../bootstrap.php');
 require_once __DIR__ . '/../app/AppKernel.php';
 
 $request = Request::create();
+
 define('BASE_URL',$request->getBaseUrl());
 
 $app = new AppKernel($env,$request);
