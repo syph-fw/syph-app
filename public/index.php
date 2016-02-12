@@ -1,20 +1,16 @@
 <?php
 
-use Syph\Http\Http;
-use Syph\AppBuilder\AppBuilder;
 use Syph\Http\Base\Request;
 
-$env = include_once('../bootstrap.php');
-
-require_once __DIR__ . '/../app/AppKernel.php';
+include_once('../bootstrap.php');
 
 $request = Request::create();
 
 define('BASE_URL',$request->getBaseUrl());
 
-$app = new AppKernel($env,$request);
+$app = new AppKernel($request);
 
-$response = $app->handleRequest(new AppBuilder());
+$response = $app->handleRequest();
 
 try{
     echo $response;

@@ -14,6 +14,7 @@ class AppKernel extends Kernel
 
     public function registerApps(){
         $apps = array(
+
             new DemoApp\DemoApp(),
 
         );

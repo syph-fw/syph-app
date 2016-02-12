@@ -6,7 +6,6 @@
  * Time: 13:43
  */
 return array(
-    'app_name' => 'DemoApp',
     'template' => 'flat', //options('flat','twig')
     'db_strategy' => 'DAO',
 );
