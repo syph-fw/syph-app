@@ -9,9 +9,9 @@
 //Include Autoload
 require_once 'autoload.php';
 
-include_once('global/functions.php');
+require_once('global/functions.php');
 
-include_once('routing.php');
+require_once('routing.php');
 
 require_once USER_APPS_DIR.'AppKernel.php';
 
