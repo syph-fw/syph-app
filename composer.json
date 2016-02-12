@@ -1,21 +1,20 @@
 {
   "name": "sylabs/syph-app",
   "description": "SyphApplication",
-  "minimum-stability": "stable",
-  "prefer-stable" : true,
   "license": "MIT",
   "type": "project",
   "authors": [
     {
-      "name": "Bruno Louvem",
-      "email": "btlouvem@gmail.com"
+      "name": "Sylabs",
+      "email": "syph-fw@gmail.com"
     }
   ],
   "require": {
     "php": ">=5.3.17",
-    "sylabs/syph-framework": ">=1.0"
+    "sylabs/syph-framework": "1.*"
   },
   "autoload": {
-    "psr-4": { "": "src/" }
+    "psr-4": { "": "src/" },
+    "classmap": [ "app/AppKernel.php" ]
   }
 }
