@@ -4,24 +4,52 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "6d37b11cf4d8194cf67b227476d1f3cc",
-    "content-hash": "0be30baeb9c516ceaf89346e0fa3a9d7",
+    "hash": "cd692e41a9c864465ecd58ec513f9f10",
+    "content-hash": "13e1c8a509ce00fd99643a8573665dc0",
     "packages": [
         {
-            "name": "sylabs/syph-framework",
-            "version": "1.0.7",
+            "name": "container-interop/container-interop",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/sylabs/syph-framework.git",
-                "reference": "bfb25c34d1af66cf7dab4344ab4557f4fa3e668e"
+                "url": "https://github.com/container-interop/container-interop.git",
+                "reference": "fc08354828f8fd3245f77a66b9e23a6bca48297e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sylabs/syph-framework/zipball/bfb25c34d1af66cf7dab4344ab4557f4fa3e668e",
-                "reference": "bfb25c34d1af66cf7dab4344ab4557f4fa3e668e",
+                "url": "https://api.github.com/repos/container-interop/container-interop/zipball/fc08354828f8fd3245f77a66b9e23a6bca48297e",
+                "reference": "fc08354828f8fd3245f77a66b9e23a6bca48297e",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Interop\\Container\\": "src/Interop/Container/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Promoting the interoperability of container objects (DIC, SL, etc.)",
+            "time": "2014-12-30 15:22:37"
+        },
+        {
+            "name": "sylabs/syph-framework",
+            "version": "1.0.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/sylabs/syph-framework.git",
+                "reference": "a2164359da8f2e33e061064577bfca5ecceaf7af"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/sylabs/syph-framework/zipball/a2164359da8f2e33e061064577bfca5ecceaf7af",
+                "reference": "a2164359da8f2e33e061064577bfca5ecceaf7af",
                 "shasum": ""
             },
             "require": {
+                "container-interop/container-interop": "1.*",
                 "php": ">=5.3.17",
                 "twig/twig": "~1.0"
             },
@@ -30,8 +58,8 @@
             },
             "type": "library",
             "autoload": {
-                "psr-0": {
-                    "Syph\\": "src/"
+                "psr-4": {
+                    "Syph\\": "src/Syph"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -45,7 +73,10 @@
                 }
             ],
             "description": "SyphFramework",
-            "time": "2015-12-27 00:24:30"
+            "keywords": [
+                "framework"
+            ],
+            "time": "2016-02-16 19:54:58"
         },
         {
             "name": "twig/twig",
@@ -113,7 +144,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": [],
-    "prefer-stable": true,
+    "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
         "php": ">=5.3.17"

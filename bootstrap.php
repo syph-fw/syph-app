@@ -13,7 +13,6 @@ require_once('global/functions.php');
 
 require_once('routing.php');
 
-require_once USER_APPS_DIR.'AppKernel.php';
 
 
 
