@@ -8,9 +8,6 @@
 
 //Include Autoload
 require_once 'autoload.php';
-
-require_once('global/functions.php');
-
 require_once('routing.php');
 
 
