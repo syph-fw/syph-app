@@ -1,0 +1,18 @@
+#!/usr/bin/env php
+<?php
+
+use Syph\Console\ConsoleApp;
+use Syph\Console\Input\ArgvInput;
+
+$loader = require __DIR__ . '/autoload.php';
+
+$input = new ArgvInput();
+$kernel = new AppKernel();
+$app = new ConsoleApp($kernel);
+
+$app->register($input);
+
+$app->run();
+echo "Estou vivo!!!";
+
+$input->printArgs();
