@@ -13,6 +13,5 @@ $app = new ConsoleApp($kernel);
 $app->register($input);
 
 $app->run();
-echo "Estou vivo!!!";
 
-$input->printArgs();
+//$input->printArgs();
