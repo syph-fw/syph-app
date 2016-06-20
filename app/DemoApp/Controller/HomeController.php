@@ -19,6 +19,8 @@ class HomeController extends BaseController
         $renderer = $this->get('view.renderer');
         $renderer->run('DemoApp:example/index.html.twig');
 
+        $logger = $this->get('logger');
+        $logger->getLogger()->addInfo('Olá estou vivo!');
 
         return View::render($renderer,array());
 
