@@ -10,20 +10,17 @@ namespace DemoApp\Controller;
 
 use Syph\Controller\BaseController;
 use Syph\View\View;
-use Syph\View\Renderer;
 
 class HomeController extends BaseController
 {
 
     public function index(){
-        $renderer = $this->get('view.renderer');
-        $renderer->run('DemoApp:example/index.html.twig');
 
         $logger = $this->get('logger');
-        $logger->getLogger()->addInfo('Olá estou vivo!');
+        
+        $logger->addInfo('Olá estou vivo!');
 
-        return View::render($renderer,array());
-
+        return View::render($this->createView('DemoApp:example/index.html.twig'),array());
     }
 
 

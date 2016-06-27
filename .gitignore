@@ -7,5 +7,5 @@ out
 gen
 # Created by .ignore support plugin (hsz.mobi)
 vendor
-storage
+storage/logs/*
 !public/assets/vendor/
