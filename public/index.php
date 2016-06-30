@@ -11,9 +11,5 @@ define('BASE_URL',$request->getBaseUrl());
 $app = new AppKernel($request);
 
 $response = $app->handleRequest();
+$response->show();
 
-try{
-    echo $response;
-} catch(Exception $e){
-    echo $e->getMessage();
-}
