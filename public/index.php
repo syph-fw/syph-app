@@ -6,10 +6,13 @@ include_once('../bootstrap.php');
 
 $request = Request::create();
 
-define('BASE_URL',$request->getBaseUrl());
+try{
+    $app = new AppKernel($request);
 
-$app = new AppKernel($request);
+    $response = $app->handleRequest();
 
-$response = $app->handleRequest();
-$response->show();
-
+    $response->show();
+}catch (\Exception $e){
+    $syphException = new \Syph\Exception\SyphException($e);
+    $syphException->getSyphMessage();
+}

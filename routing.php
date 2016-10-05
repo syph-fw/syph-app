@@ -17,3 +17,13 @@ RouterCollection::route(
         }
     )
 );
+
+
+RouterCollection::route(
+    'teste',
+    new Route('/teste/(\d+)', function($id){
+        $controller = 'DemoApp:HomeController:index';
+        return array('controller'=>$controller,'args'=>array('id'=>$id));
+    }
+    )
+);

@@ -14,11 +14,11 @@ use Syph\View\View;
 class HomeController extends BaseController
 {
 
-    public function index(){
+    public function index($id = null){
 
         $logger = $this->get('logger');
-        
-        $logger->addInfo('Olá estou vivo!');
+        $custom = $this->get('demo.custom_service');
+        $logger->addInfo('id -- '.$id);
 
         return View::render($this->createView('DemoApp:example/index.html.twig'),array());
     }
