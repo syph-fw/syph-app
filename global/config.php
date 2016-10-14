@@ -5,14 +5,14 @@
  * Date: 27/09/2015
  * Time: 09:35
  */
-
+/**
+ * environment => ('prod','dev')
+ * debug => (true,false)
+ * db_strategy => ('ar','doctrine')
+ * 
+ */
 return array(
-    'environment' => array(
-        'dev' => array(
-            'debug' => true
-        ),
-        'prod' => array(
-            'debug' => false
-        ),
-    ),
+    'environment' => 'dev',
+    'debug' => true,
+
 );

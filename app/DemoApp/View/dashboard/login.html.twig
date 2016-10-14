@@ -1,0 +1,41 @@
+{% extends 'layout.html.twig' %}
+{% block title %}Bem vindo ao Syph{% endblock %}
+{% block body %}
+    <div class="loader-wrapper">
+        <div id="loader-image"></div>
+    </div>
+    <!-- **Wrapper** -->
+    <div class="wrapper">
+        <div class="inner-wrapper">
+
+            <!-- **Main - Starts** -->
+            <div id="main">
+                <div class="blank-template-container">
+                    <div class="blank-template">
+                        <div class="blank-template-wrapper">
+                            <div class="container">
+                                <!-- Primary Starts -->
+                                <section id="primary" class="content-full-width">
+                                    <h1 class="aligncenter">Dashboard</h1>
+                                    <h4 class="aligncenter">Login to enter.</h4>
+                                    <hr>
+                                    <form action="/admin/check" method="post">
+                                        <label for="username">Login</label>
+                                        <input type="text" id="username" name="username"/>
+                                        <br>
+                                        <label for="pass">Password</label>
+                                        <input type="password" id="pass" name="pass"/>
+                                        <br>
+                                        <button class="button" type="submit">Send</button>
+                                    </form>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- **Main - Ends** -->
+
+        </div><!-- **inner-wrapper - End** -->
+
+    </div><!-- **Wrapper - End** -->
+{% endblock %}

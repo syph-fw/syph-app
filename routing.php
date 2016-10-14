@@ -20,10 +20,37 @@ RouterCollection::route(
 
 
 RouterCollection::route(
-    'teste',
-    new Route('/teste/(\d+)', function($id){
-        $controller = 'DemoApp:HomeController:index';
-        return array('controller'=>$controller,'args'=>array('id'=>$id));
+    'test',
+    new Route('/test', function(){
+        $controller = 'DemoApp:HomeController:test';
+        return array('controller'=>$controller,'args'=>array());
+    }
+    )
+);
+
+RouterCollection::route(
+    'admin',
+    new Route('/admin', function(){
+        $controller = 'DemoApp:DashboardController:index';
+        return array('controller'=>$controller,'args'=>array());
+    }
+    )
+);
+
+RouterCollection::route(
+    'admin_test',
+    new Route('/admin/test', function(){
+        $controller = 'DemoApp:DashboardController:test';
+        return array('controller'=>$controller,'args'=>array());
+    }
+    )
+);
+
+RouterCollection::route(
+    'admin_check',
+    new Route('/admin/check', function(){
+        $controller = 'DemoApp:DashboardController:check';
+        return array('controller'=>$controller,'args'=>array());
     }
     )
 );

@@ -8,7 +8,6 @@ $request = Request::create();
 
 try{
     $app = new AppKernel($request);
-
     $response = $app->handleRequest();
 
     $response->show();

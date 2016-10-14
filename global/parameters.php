@@ -10,7 +10,7 @@ return array(
     'parameters'=> array(
         'db_schema'=>'sylabs',
         'db_user'=>'syph',
-        'db_pass'=>'stronger_pass',
+        'db_pass'=>'security',
         'db_port'=>'3306'
     )
 );

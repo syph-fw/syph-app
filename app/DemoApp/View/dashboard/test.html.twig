@@ -1,0 +1,32 @@
+{% extends 'layout.html.twig' %}
+{% block title %}Bem vindo ao Syph{% endblock %}
+{% block body %}
+    <div class="loader-wrapper">
+        <div id="loader-image"></div>
+    </div>
+    <!-- **Wrapper** -->
+    <div class="wrapper">
+        <div class="inner-wrapper">
+
+            <!-- **Main - Starts** -->
+            <div id="main">
+                <div class="blank-template-container">
+                    <div class="blank-template">
+                        <div class="blank-template-wrapper">
+                            <div class="container">
+                                <!-- Primary Starts -->
+                                <section id="primary" class="content-full-width">
+                                    {#<img src="{{ asset('/assets/images/logo.png') }}" style="width: 200px; margin: 0 41%;">#}
+                                    <h1 class="aligncenter">Test</h1>
+                                    <h4 class="aligncenter">Test page on dashboard.</h4>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- **Main - Ends** -->
+
+        </div><!-- **inner-wrapper - End** -->
+
+    </div><!-- **Wrapper - End** -->
+{% endblock %}

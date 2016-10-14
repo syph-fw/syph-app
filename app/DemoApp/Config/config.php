@@ -6,6 +6,9 @@
  * Time: 13:43
  */
 return array(
-    'template' => 'flat', //options('flat','twig')
+    'environment' => 'dev',
     'db_strategy' => 'DAO',
+    'firewall' => [
+        '/test' => 'anonymous'
+    ]
 );
