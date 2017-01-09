@@ -8,49 +8,22 @@
  */
 use Syph\Routing\Route;
 use Syph\Routing\RouterCollection;
+$router = new RouterCollection();
 
+// Adição de rota da forma antiga, ainda compatível
 RouterCollection::route(
     'home',
     new Route('/', function(){
-            $controller = 'DemoApp:HomeController:index';
-            return array('controller'=>$controller,'args'=>array());
+            return ['controller'=>'DemoApp:HomeController:index'];
         }
     )
 );
 
+// Nova forma de cadastro de rota, com array especificando nome e path da rota e restringindo o tipo da requisição a um GET
+$router->addGet(['path'=>'/test/{name}/{id}','name'=>'Teste'], 'DemoApp:HomeController:test');
 
-RouterCollection::route(
-    'test',
-    new Route('/test', function(){
-        $controller = 'DemoApp:HomeController:test';
-        return array('controller'=>$controller,'args'=>array());
-    }
-    )
-);
+// Nova rota restringindo o tipo a um POST e sem especificar o nome da rota
+$router->addPost('/test/post', 'DemoApp:HomeController:testPost');
 
-RouterCollection::route(
-    'admin',
-    new Route('/admin', function(){
-        $controller = 'DemoApp:DashboardController:index';
-        return array('controller'=>$controller,'args'=>array());
-    }
-    )
-);
 
-RouterCollection::route(
-    'admin_test',
-    new Route('/admin/test', function(){
-        $controller = 'DemoApp:DashboardController:test';
-        return array('controller'=>$controller,'args'=>array());
-    }
-    )
-);
 
-RouterCollection::route(
-    'admin_check',
-    new Route('/admin/check', function(){
-        $controller = 'DemoApp:DashboardController:check';
-        return array('controller'=>$controller,'args'=>array());
-    }
-    )
-);

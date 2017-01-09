@@ -9,6 +9,7 @@ namespace DemoApp\Controller;
 
 
 use Syph\Controller\BaseController;
+use Syph\Http\Base\Request;
 use Syph\View\View;
 
 class HomeController extends BaseController
@@ -19,9 +20,15 @@ class HomeController extends BaseController
         return View::render($this->createView('DemoApp:example/index.html.twig'));
     }
 
-    public function test()
+    public function test($name,$id)
     {
-        return View::render($this->createView('DemoApp:example/test.html.twig'));
+        return View::render($this->createView('DemoApp:example/test.html.twig'),compact('id','name'));
+    }
+
+    public function testPost()
+    {
+        $request = $this->getRequest();
+        sd($request->post->getAll());
     }
 
 }
