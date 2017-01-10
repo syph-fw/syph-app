@@ -6,8 +6,6 @@
  * Time: 13:43
  */
 return array(
-    'environment' => 'dev',
-    'db_strategy' => 'DAO',
     'firewall' => [
         '/test' => 'anonymous'
     ]

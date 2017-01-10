@@ -34,6 +34,13 @@
                                                 <button type="submit" class="btn btn-primary">Enviar</button>
                                             </form>
                                         </div>
+                                        <div class="col-md-6 col-md-offset-3 text-center">
+                                            <hr>
+                                            {% for user in users %}
+                                                <p>{{ user.id }} - {{ user.nome }} - {{ user.email }}</p>
+                                            {% endfor %}
+                                        </div>
+
                                     </div>
                                 </section>
                             </div>
