@@ -11,13 +11,14 @@ use Syph\Routing\RouterCollection;
 $router = new RouterCollection();
 
 // Adição de rota da forma antiga, ainda compatível
-RouterCollection::route(
-    'home',
-    new Route('/', function(){
-            return ['controller'=>'DemoApp:HomeController:index'];
-        }
-    )
-);
+//RouterCollection::route(
+//    'home',
+//    new Route('/', function(){
+//            return ['controller'=>'DemoApp:HomeController:index'];
+//        }
+//    )
+//);
+$router->add('/', 'DemoApp:HomeController:index');
 
 // Nova forma de cadastro de rota, com array especificando nome e path da rota e restringindo o tipo da requisição a um GET
 $router->addGet(['path'=>'/test/{name}/{id}','name'=>'Teste'], 'DemoApp:HomeController:test');
