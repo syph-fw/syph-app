@@ -5,8 +5,8 @@
 .idea
 out
 gen
-# Created by .ignore support plugin (hsz.mobi)
 vendor
-!storage/logs
+storage/*
 storage/logs/*
+!storage/logs/.gitkeep
 !public/assets/vendor/
