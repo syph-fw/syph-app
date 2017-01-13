@@ -3,6 +3,8 @@
   "description": "SyphApplication",
   "license": "MIT",
   "type": "project",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
   "authors": [
     {
       "name": "Sylabs",
