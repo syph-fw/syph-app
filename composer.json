@@ -3,8 +3,6 @@
   "description": "SyphApplication",
   "license": "MIT",
   "type": "project",
-  "minimum-stability": "dev",
-  "prefer-stable": true,
   "authors": [
     {
       "name": "Sylabs",
@@ -13,10 +11,15 @@
   ],
   "require": {
     "php": ">=5.3.17",
-    "sylabs/syph-framework":"^1.2"
+    "sylabs/syph-framework":"1.2.x-dev"
   },
   "autoload": {
     "psr-4": { "": "src/" },
     "classmap": [ "app/AppKernel.php" ]
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.2-dev"
+    }
   }
 }
