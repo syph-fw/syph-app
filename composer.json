@@ -13,7 +13,7 @@
   ],
   "require": {
     "php": ">=5.3.17",
-    "sylabs/syph-framework": ">=1.0"
+    "sylabs/syph-framework":"^1.2"
   },
   "autoload": {
     "psr-4": { "": "src/" },
