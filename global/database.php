@@ -6,15 +6,13 @@
  * Time: 19:40
  */
 return [
-    'database' => [
-        'dev' => [
-            'db_connector' => 'active_record',
-            'db'        => 'mysql',
-            'host'      => 'localhost',
-            'port'      => '3306',
-            'username'  => 'root',
-            'password'  => '123',
-            'database'  => 'test_ar'
-        ]
+    'dev' => [
+        'db_connector' => 'active_record',
+        'db'        => '{db_tp}',
+        'host'      => '{db_host}',
+        'port'      => '{db_port}',
+        'username'  => '{db_user}',
+        'password'  => '{db_pass}',
+        'database'  => '{db_base}'
     ]
 ];

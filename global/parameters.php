@@ -7,10 +7,10 @@
  */
 
 return array(
-    'parameters'=> array(
-        'db_schema'=>'sylabs',
-        'db_user'=>'syph',
-        'db_pass'=>'security',
-        'db_port'=>'3306'
-    )
+    'db_tp'=>'mysql',
+    'db_base'=>'test_ar',
+    'db_host'=>'localhost',
+    'db_user'=>'root',
+    'db_pass'=>'123',
+    'db_port'=>'3306'
 );

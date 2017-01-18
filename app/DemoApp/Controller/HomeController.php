@@ -11,6 +11,7 @@ namespace DemoApp\Controller;
 use Syph\Controller\BaseController;
 use Syph\Http\Base\Request;
 use DemoApp\Model\User;
+use Syph\Http\Response\JsonResponse;
 use Syph\View\View;
 
 class HomeController extends BaseController
@@ -30,7 +31,8 @@ class HomeController extends BaseController
     public function testPost()
     {
         $request = $this->getRequest();
-        sd($request->post->getAll());
+        $json = new JsonResponse($request->post->getAll());
+        echo $json;
     }
 
 }

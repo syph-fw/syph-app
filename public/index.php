@@ -15,3 +15,4 @@ try{
     $syphException = new \Syph\Exception\SyphException($e);
     $syphException->getSyphMessage();
 }
+$app->finish();
