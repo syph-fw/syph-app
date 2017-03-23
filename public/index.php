@@ -11,8 +11,8 @@ try{
     $response = $app->handleRequest();
 
     $response->show();
+    $app->finish();
 }catch (\Exception $e){
     $syphException = new \Syph\Exception\SyphException($e);
     $syphException->getSyphMessage();
 }
-$app->finish();

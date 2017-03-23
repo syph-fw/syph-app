@@ -1615,16 +1615,16 @@
         },
         {
             "name": "sylabs/syph-framework",
-            "version": "v1.2.4",
+            "version": "v1.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sylabs/syph-framework.git",
-                "reference": "22620369a7abbbc928f6d21020e597e66fcace5f"
+                "reference": "48f683c37df0a775366964b5043af37119d39de1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sylabs/syph-framework/zipball/22620369a7abbbc928f6d21020e597e66fcace5f",
-                "reference": "22620369a7abbbc928f6d21020e597e66fcace5f",
+                "url": "https://api.github.com/repos/sylabs/syph-framework/zipball/48f683c37df0a775366964b5043af37119d39de1",
+                "reference": "48f683c37df0a775366964b5043af37119d39de1",
                 "shasum": ""
             },
             "require": {
@@ -1659,7 +1659,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2017-03-16T16:03:30+00:00"
+            "time": "2017-03-21T23:19:53+00:00"
         },
         {
             "name": "symfony/cache",
