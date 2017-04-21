@@ -14,4 +14,8 @@ $app->register($input);
 
 $app->run();
 
-//$input->printArgs();
+$input->printArgs();
+
+//$climate = new League\CLImate\CLImate;
+//
+//$climate->out('This prints to the terminal');
