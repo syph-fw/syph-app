@@ -1,0 +1,48 @@
+{% extends 'layout.html.twig' %}
+{% block title %}Bem vindo ao Syph{% endblock %}
+{% block body %}
+    <div class="loader-wrapper">
+        <div id="loader-image"></div>
+    </div>
+    <!-- **Wrapper** -->
+    <div class="wrapper">
+        <div class="inner-wrapper">
+
+            <!-- **Main - Starts** -->
+            <div id="main">
+                <div class="blank-template-container">
+                    <div class="blank-template">
+                        <div class="blank-template-wrapper">
+                            <div class="container">
+                                <!-- Primary Starts -->
+                                <section id="primary" class="content-full-width">
+                                    <div class="container">
+                                        <div class="column dt-sc-one-third first"></div>
+                                        <div class="column dt-sc-one-third">
+                                            <h1 class="aligncenter">Dashboard</h1>
+                                            <h3 class="aligncenter"> Faça login </h3>
+                                            <form action="/auth" method="post" id="login" class="dt-sc-contact-form">
+                                                <input type="hidden" name="token" value="{{ csrf() }}">
+                                                <label for="username">Username</label>
+                                                <input type="text" name="username" id="username"/>
+                                                <br>
+                                                <label for="pass">Senha</label>
+                                                <input type="password" name="pass" id="pass"/>
+                                                <br>
+                                                <button type="submit" class="button dt-sc-button1 btn-primary">Enviar</button>
+                                            </form>
+                                        </div>
+                                        <div class="column dt-sc-one-third"></div>
+                                    </div>
+
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- **Main - Ends** -->
+
+        </div><!-- **inner-wrapper - End** -->
+
+    </div><!-- **Wrapper - End** -->
+{% endblock %}
