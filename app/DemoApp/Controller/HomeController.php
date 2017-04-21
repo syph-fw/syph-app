@@ -7,12 +7,9 @@
  */
 namespace DemoApp\Controller;
 
-
 use Syph\Controller\BaseController;
-use Syph\Http\Base\Request;
 use DemoApp\Model\User;
 use Syph\Http\Redirect;
-use Syph\Http\Response\JsonResponse;
 use Syph\Security\Firewall\Firewall;
 use Syph\View\View;
 
@@ -68,7 +65,7 @@ class HomeController extends BaseController
         return View::render($this->createView('DemoApp:example/test.html.twig'),compact('id','name','users'));
     }
 
-    public function check()
+    public function admin()
     {
         return View::render($this->createView('DemoApp:example/admin.html.twig'));
     }
