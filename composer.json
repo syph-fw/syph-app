@@ -11,7 +11,7 @@
   ],
   "require": {
     "php": ">=5.3.17",
-    "sylabs/syph-framework":"^1.2"
+    "syph-fw/syph-framework":"^1.2"
   },
   "autoload": {
     "classmap": [ "app/AppKernel.php" ]
